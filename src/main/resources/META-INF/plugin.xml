@@ -5,14 +5,22 @@
     <vendor>litian-98</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>Dart</depends>
+    <depends>org.jetbrains.kotlin</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
+    <!-- 定义通知组 -->
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.litian98.renametool2.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <notificationGroup
+                id="TraverseAndNotifyAction"
+                displayType="BALLOON"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.litian98.renametool2.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
+    <actions>
+
+        <action id="com.github.litian98.renametool2.toolWindow.RenameAction"
+                class="com.github.litian98.renametool2.toolWindow.RenameAction" text="重命名服务"
+                description="重命名服务">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
