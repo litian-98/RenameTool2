@@ -51,7 +51,7 @@ dependencies {
     //依赖配置
     implementation("com.github.javafaker:javafaker:1.0.2")
     implementation("io.github.serpro69:kotlin-faker:2.0.0-rc.4")
-    implementation("io.github.serpro69:kotlin-faker-lorem:2.0.0-rc.4")
+    implementation("io.github.serpro69:kotlin-faker-lorem:2.0.0-rc.7")
 }
 
 // Configure IntelliJ Platform Gradle Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-extension.html
